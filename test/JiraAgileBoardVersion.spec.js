@@ -8,8 +8,8 @@ const util = require('util');
 const JiraAgileBoardVersion = require('../models/jira_agile_board_version');
 const validJson = {
             "self": "http://www.example.com/jira/version/10000",
-            "jira_id": 10000,
-            "project_id": 10000,
+            "id": 10000,
+            "projectId": 10000,
             "board_id": 1, // this is created with knex seed
             "name": "Version 1",
             "description": "A first version",

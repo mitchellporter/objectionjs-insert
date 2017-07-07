@@ -42,10 +42,19 @@ class JiraAgileBoardVersion extends Model {
   // I use this to rename a key
   $parseJson(json) {
     console.log('$parseJson before: ' + util.inspect(json));
-    if (json.project_id) {
-      json.jira_project_id = json.project_id;
-      delete json.project_id;
+
+    if (json.id) {
+      console.log('FOUND JSON ID');
+      json.jira_id = json.id;
+      delete json.id;
     }
+
+    if (json.projectId) {
+      console.log('FOUND PROJECT ID');
+      json.jira_project_id = json.projectId;
+      delete json.projectId;
+    }
+
     console.log('$parseJson after: ' + util.inspect(json));
     return json;
   }
@@ -65,6 +74,7 @@ class JiraAgileBoardVersion extends Model {
     // delete this.board_id;
     // delete this.jira_project_id;
   }
+  
 }
 
 module.exports = JiraAgileBoardVersion;
