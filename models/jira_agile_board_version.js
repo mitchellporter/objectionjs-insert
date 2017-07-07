@@ -58,14 +58,6 @@ class JiraAgileBoardVersion extends Model {
     return super.$parseDatabaseJson(new_json);
   }
 
-  $formatJson(json) {
-    console.log('FORMAT JSON YO');
-    // Remember to call the super class's implementation.
-    json = super.$formatJson(json);
-    // Do your conversion here.
-    return json;
-  }
-
   // If I run the below deletes, it fixes my problem but feels hacky
   $afterInsert() {
     console.log('$afterInsert: ' + util.inspect(this));
