@@ -1,5 +1,5 @@
 # objectionjs-insert
-Test project for issue # - 
+Test project for issue #436 - https://github.com/Vincit/objection.js/issues/436
 
 Setup:
 1. Install dependencies with `npm install`
